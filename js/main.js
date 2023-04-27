@@ -17,11 +17,11 @@ console.log("The base price is :" + basePrice + "€");
 
 
 if (userAge < 18) {// A 20% discount is applied for minors
-    finalPrice = basePrice * 20 / 100;
+    finalPrice = basePrice - (basePrice * 20 / 100) ;
 }
 // A 40% discount is applied for over 65s.
 else if ( userAge > 65) {
-    finalPrice = basePrice * 40 / 100;
+    finalPrice = basePrice - (basePrice * 40 / 100);
 } 
 else {// Based on this information, he will calculate the total price of the trip
     finalPrice = basePrice;
