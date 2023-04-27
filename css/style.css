@@ -3,3 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#rate{
+    font-size: 30px;
+    font-weight: 900;
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+body{
+    background-color: black;
+}

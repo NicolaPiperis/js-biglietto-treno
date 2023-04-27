@@ -1,33 +1,35 @@
-// Dichiare le variabili globali
-let numeroKm, userEta, prezzoBase, prezzoFinale;
+// Declare the global variables
+let numberKm, userAge, basePrice, finalPrice, message;
 
-// Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere 
-numeroKm = parseInt(prompt("Quanti chilometri percorrerai?"));
-console.log("I Km da percorrere sono : " + numeroKm + "Km");
+// The program will have to ask the user for the number of kilometers he wants to travel
+numberKm = parseInt(prompt("how many kilometers will you travel?"));
+console.log("The kilometers you will do, will be: " + numberKm );
 
-// Il programma dovrà chiedere all’utente la sua età
-userEta = parseInt(prompt("Quanti anni hai?"));
-console.log("L'utente ha : " + userEta + "anni");
-
-
-// Il prezzo del biglietto è definito in base ai km (0.21 € al km)
-prezzoBase = (numeroKm * 0.21)
-console.log("Il prezzo Base è :" + prezzoBase + "€");
+// The program will have to ask for the user's age
+userAge = parseInt(prompt("How old are you?"));
+console.log("User is : " + userAge + "years old");
 
 
-if (userEta < 18) {// Va applicato uno sconto del 20% per i minorenni
-    prezzoFinale = prezzoBase * 20 / 100;
+// The ticket price is defined on the basis of km (€0.21 per km)
+basePrice = (numberKm * 0.21)
+console.log("The base price is :" + basePrice + "€");
+
+
+if (userAge < 18) {// A 20% discount is applied for minors
+    finalPrice = basePrice * 20 / 100;
 }
-
-// Va applicato uno sconto del 40% per gli over 65.
-if else (userEta > 65) {
-    prezzoFinale = prezzoBase * 40 / 100;
+// A 40% discount should be applied for over 65s.
+else if ( userAge > 65) {
+    finalPrice = basePrice * 40 / 100;
+} 
+else {// Based on this information, he will have to calculate the total price of the trip
+    finalPrice = basePrice;
 }
-console.log("Il prezzo finale è di " + prezzoFinale + "€");
- 
-// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio
+console.log("The final price is " + finalPrice + "€");
 
+// message
+message = `The sum to be paid based on the rate applied considering the various discounts based on age will be ${finalPrice} €`;
 
 // Output
-
+document.getElementById("rate").innerHTML = message;
   
